@@ -43,8 +43,9 @@ jobs:
           plugin_stackoverflow: yes
           plugin_stackoverflow_user: 10871900
           plugin_stackoverflow_limit: 4
-  build:
+  stats:
     runs-on: ubuntu-latest
+    needs: metrics
     steps:
     - uses: actions/checkout@v2
       with:
