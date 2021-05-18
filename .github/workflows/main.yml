@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: metrics.svg
-         committer_branch: generated
+          committer_branch: generated
           repositories_skipped: ""
           verify: yes
           plugin_isocalendar: yes
