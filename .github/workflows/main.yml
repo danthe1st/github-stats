@@ -45,12 +45,12 @@ jobs:
           plugin_stackoverflow: yes
           plugin_stackoverflow_user: 10871900
           plugin_stackoverflow_limit: 4
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_days: 14
-          plugin_wakatime_sections: time, projects, projects-graphs
-          plugin_wakatime_limit: 4
-          plugin_wakatime_url: https://wakatime.com
+          plugin_wakatime: no
+          #plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          #plugin_wakatime_days: 14
+          #plugin_wakatime_sections: time, projects, projects-graphs
+          #plugin_wakatime_limit: 4
+          #plugin_wakatime_url: https://wakatime.com
   stats:
     runs-on: ubuntu-latest
     needs: metrics
