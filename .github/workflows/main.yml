@@ -20,7 +20,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: metrics.svg
           committer_branch: generated
-          repositories_skipped: ""
+          repositories_skipped: "danthe1st/obsidian"
           verify: yes
           plugin_isocalendar: yes
           plugin_languages: yes
