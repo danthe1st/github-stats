@@ -14,6 +14,7 @@ jobs:
     steps:
       # See action.yml for all options
       #- uses: lowlighter/metrics@latest
+      # need to use fork because of https://github.com/lowlighter/metrics/issues/1706
       - uses: gh-metrics/metrics@master
         with:
           # Your GitHub token
