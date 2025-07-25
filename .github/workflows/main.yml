@@ -49,26 +49,26 @@ jobs:
     runs-on: ubuntu-latest
     needs: metrics
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         repository: 'jstrieb/github-stats'
     - name: remove generated directory
       run: rm -rf generated
     - name: checkout this repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         path: 'generated'
         ref: 'generated'
     # Run using Python 3.8 for consistency and aiohttp
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v5
       with:
         python-version: '3.8'
         architecture: 'x64'
 
     # Cache dependencies. From:
     # https://github.com/actions/cache/blob/master/examples.md#python---pip
-    - uses: actions/cache@v2
+    - uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
